@@ -18,7 +18,7 @@ Before using this configuration, install the required tools:
 
 - **Tmux** (`.tmux.conf`)
 - **Neovim (NvChad)** (`~/.config/nvim`)
-- **Kitty Terminal** (`~/.config/kitty`)https://nvchad.com/docs/quickstart/install
+- **Kitty Terminal** (`~/.config/kitty`)
 - **Zsh + Oh My Zsh + Powerlevel10k** (`.zshrc`, `.p10k.zsh`, `.oh-my-zsh`)
 - **Custom Scripts** (`~/.bin`)
 
