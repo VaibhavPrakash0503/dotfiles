@@ -120,7 +120,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias clean="~/.bin/clean.sh"
 alias update="~/.bin/update_fedora.sh"
-alias git_help="~/.bin/git_help.md"
+alias git_help="nvim ~/.bin/git_help.md"
 alias grub_update="sudo grub2-mkconfig -o /boot/grub2/grub"
 alias vim="nvim"
 if [[ -z "$TMUX" ]]; then
