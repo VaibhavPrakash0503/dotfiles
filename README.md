@@ -12,7 +12,7 @@ Before using this configuration, install the required tools:
 - **Neovim** (Text Editor)
 - **Oh My Zsh** (Zsh Framework)
 - **Powerlevel10k** (Zsh Theme)
-- **[NvChad](https://nvchad.com/docs/quickstart/install) (neovim configuration)
+- [NvChad](https://nvchad.com/docs/quickstart/install) (neovim configuration)
 
 ## Included Configurations
 
