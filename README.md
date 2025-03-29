@@ -9,6 +9,7 @@ Before using this configuration, install the required tools:
 - **Zsh** (Shell)
 - **Tmux** (Terminal Multiplexer)
 - **Kitty** (Terminal Emulator)
+- **Martian Mono Nerd Font** (Terminal font)
 - **Neovim** (Text Editor)
 - **Oh My Zsh** (Zsh Framework)
 - **Powerlevel10k** (Zsh Theme)
