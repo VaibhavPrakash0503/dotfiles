@@ -123,9 +123,9 @@ alias update="~/.bin/update_fedora.sh"
 alias git_help="nvim ~/.bin/git_help.md"
 alias grub_update="sudo grub2-mkconfig -o /boot/grub2/grub"
 alias vim="nvim"
-if [[ -z "$TMUX" ]]; then
-  exec tmux new-session -A -s main
-fi
+#if [[ -z "$TMUX" ]]; then
+#  exec tmux new-session -A -s main
+#fi
 
 
 
