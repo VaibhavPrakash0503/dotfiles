@@ -9,6 +9,7 @@ Before using this configuration, install the required tools:
 - **Zsh** (Shell)
 - **Tmux** (Terminal Multiplexer)
 - **Kitty** (Terminal Emulator)
+- [Ghostty] (https://ghostty.org/docs/install/binary#linux-(official)) (Terminal Emulator)
 - **Martian Mono Nerd Font** (Terminal font)
 - **Neovim** (Text Editor)
 - **Oh My Zsh** (Zsh Framework)
