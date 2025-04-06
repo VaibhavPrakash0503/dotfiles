@@ -16,6 +16,9 @@ alias grub_update="sudo grub2-mkconfig -o /boot/grub2/grub"
 alias vim="nvim"
 alias pfzf='fzf --preview="bat --color=always {}"'
 alias nfzf='nvim $(fzf -m --preview="bat --color=always {}")'
+# To make sure the shortcut of fzf works fine
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 #if [[ -z "$TMUX" ]]; then
  # exec tmux new-session -A -s main
 #fi
