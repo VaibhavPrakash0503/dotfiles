@@ -5,6 +5,6 @@
 - **Dash to Dock** (Gives a new kind of dash at the botttom)
 - **Logo Menu** (Adds the logo at top left bar)
 - **Switcher** (Gives the nice search bar)
-- **Tiling Sehll** (Tiling window manager)
+- **Tiling Shell** (Tiling window manager)
 - **Todo.txt** (Todo task list tracker)
 - **Vitals** (Gives a glimpse of computer stats like Internet speed, CPU performance etc)
