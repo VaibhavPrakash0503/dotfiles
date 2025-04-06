@@ -13,7 +13,7 @@ Before using this configuration, install the required tools:
 - **Martian Mono Nerd Font** (Terminal font)
 - **Neovim** (Text Editor)
 - **Oh My Zsh** (Zsh Framework)
-- **Powerlevel10k** (Zsh Theme)
+- [Starship] (https://starship.rs/installing/)(Terminal prompt)
 - [NvChad](https://nvchad.com/docs/quickstart/install) (neovim configuration)
 
 ## Included Configurations
@@ -21,7 +21,9 @@ Before using this configuration, install the required tools:
 - **Tmux** (`.tmux.conf`)
 - **Neovim (NvChad)** (`~/.config/nvim`)
 - **Kitty Terminal** (`~/.config/kitty`)
-- **Zsh + Oh My Zsh + Powerlevel10k** (`.zshrc`, `.p10k.zsh`, `.oh-my-zsh`)
+- **Ghostty Terminal** (`~/.config/ghostty`)
+- **Starship** (`~/.config/starship.toml`)
+- **Zsh + Oh My Zsh** (`.zshrc`, `.oh-my-zsh`)
 - **Custom Scripts** (`~/.bin`)
 
 ## Installation
