@@ -13,7 +13,7 @@ Before using this configuration, install the required tools:
 - **Martian Mono Nerd Font** (Terminal font)
 - **Neovim** (Text Editor)
 - **Oh My Zsh** (Zsh Framework)
-- [Starship] (https://starship.rs/installing/)(Terminal prompt)
+- [Starship] (https://starship.rs/installing/) (Terminal prompt)
 - [NvChad](https://nvchad.com/docs/quickstart/install) (neovim configuration)
 
 ## Included Configurations
