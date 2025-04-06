@@ -15,7 +15,8 @@ Before using this configuration, install the required tools:
 - **Oh My Zsh** (Zsh Framework)
 - [Starship](https://starship.rs/installing/) (Terminal prompt)
 - [NvChad](https://nvchad.com/docs/quickstart/install) (neovim configuration)
-
+- **bat** (Similar to cat used in preview for fzf)
+- [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#linux-packages) (Fuzzy finder)
 ## Included Configurations
 
 - **Tmux** (`.tmux.conf`)
