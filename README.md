@@ -17,6 +17,7 @@ Before using this configuration, install the required tools:
 - [NvChad](https://nvchad.com/docs/quickstart/install) (neovim configuration)
 - **bat** (Similar to cat used in preview for fzf)
 - [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#linux-packages) (Fuzzy finder)
+- [yazi](https://yazi-rs.github.io/docs/installation) (Terminal File manager)
 ## Included Configurations
 
 - **Tmux** (`.tmux.conf`)
