@@ -3,9 +3,7 @@
 # This script installs my packages.
 
 
-# Define arrays 
-
-# terminal packages
+# Define array
 terminal_packages=(
 zsh
 ghostty
@@ -17,14 +15,6 @@ bat
 fzf
 fastfetch
 yazi
-)
-
-# Softwares
-software=(
-vlc
-grub-customizer
-gnome-tweaks
-code
 )
 
 # Enable third-party repositories
@@ -83,8 +73,3 @@ for pkg in "${terminal_packages[@]}"; do
   install_package "$pkg"
 done
 
-# Install software
-echo "Installing GUI software..."
-for pkg in "${software[@]}"; do
-  install_package "$pkg"
-done
