@@ -19,7 +19,7 @@ FOLDERS=(
 remove_file() {
   if [ -f "$1" ] || [ -L "$1" ]; then
     echo "Backing up and removing file: $1"
-    mv "$1" "$1.backup"  # Backup before removal
+    rm -r "$1"
   else
     echo "No file found: $1"
   fi
@@ -29,7 +29,7 @@ remove_file() {
 remove_directory() {
   if [ -d "$1" ]; then
     echo "Backing up and removing directory: $1"
-    mv "$1" "$1.backup"  # Backup before removal
+    rm -rf "$1"
   else
     echo "No directory found: $1"
   fi
