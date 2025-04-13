@@ -4,7 +4,7 @@
 
 
 # Define array
-terminal_packages=(
+packages=(
 zsh
 ghostty
 tmux
@@ -15,6 +15,7 @@ bat
 fzf
 fastfetch
 yazi
+stow
 )
 
 # Enable third-party repositories
@@ -69,7 +70,7 @@ install_package() {
 
 #Install terminal_packages
 echo "Installing terminal packages..."
-for pkg in "${terminal_packages[@]}"; do
+for pkg in "${packages[@]}"; do
   install_package "$pkg"
 done
 
