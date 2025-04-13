@@ -1,14 +1,5 @@
 #!/usr/bin/bash
 
-# Clone dotfiles into home directory
-if [ ! -d "$HOME/dotfiles" ]; then
-  echo "Cloning dotfiles..."
-  git clone https://github.com/VaibhavPrakash0503/dotfiles.git "$HOME/dotfiles" || { echo "Clone failed"; exit 1; }
-else
-  echo "dotfiles already exists, skipping clone."
-fi
-
-
 # Define the paths of the files and directories to be removed
 FILES=(
   "$HOME/.zshrc"
