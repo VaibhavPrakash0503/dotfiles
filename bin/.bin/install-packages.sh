@@ -16,6 +16,10 @@ fzf
 fastfetch
 yazi
 stow
+discord
+vlc
+gnome-tweaks
+grub-customizer
 )
 
 # Enable third-party repositories
