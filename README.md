@@ -32,8 +32,9 @@ Before using this configuration, install the required tools:
 ## Installation
 
 1. Clone this repository to your home directory
-2. Run the setup-symlinks.sh to stow the configs.
-3. Restart your terminal for changes to take effect.
+2. Run the install-packages.sh to install the packages.
+3. Run the setup-symlinks.sh to stow the configs.
+4. Restart your terminal for changes to take effect.
 
 
 This ensures that your configurations are backed up and easily restorable on any machine.
