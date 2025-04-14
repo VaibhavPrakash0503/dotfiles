@@ -18,7 +18,7 @@ Before using this configuration, install the required tools:
 - **bat** (Similar to cat used in preview for fzf)
 - [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#linux-packages) (Fuzzy finder)
 - [yazi](https://yazi-rs.github.io/docs/installation) (Terminal File manager)
-- **stow** (Used to symlink the config fiels easily)
+- **stow** (Used to symlink the config files easily)
 ## Included Configurations
 
 - **Tmux** (`.tmux.conf`)
