@@ -20,6 +20,7 @@ discord
 vlc
 gnome-tweaks
 grub-customizer
+code
 )
 
 # Enable third-party repositories
