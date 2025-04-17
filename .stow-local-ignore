@@ -1,7 +1,7 @@
 .git
 README.md
 gnome_extensions.md
-*.bak
-*.swp
-*.tmp
-*~
+.*\.bak
+.*\.swp
+.*\.tmp
+.*~ 
