@@ -48,23 +48,9 @@ done
 echo "Cleanup complete."
 
 
-# Packages to create symlink
-packages=(
-zsh
-ghostty
-tmux
-starship
-nvim
-oh-my-zsh
-bin
-)
-
 # Use stow to create symlinks for each package
 cd "$HOME/dotfiles" || { echo "Failed to change directory"; exit 1; }
 
-for pkg in "${packages[@]}"; do
-  echo "Stowing $pkg..."
-  stow "$pkg" || { echo "Failed to stow $pkg"; exit 1; }
-done
+stow -vt ~ .
 
 echo "Stowing complete"
