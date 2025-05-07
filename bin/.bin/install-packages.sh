@@ -19,7 +19,6 @@ stow
 discord
 vlc
 gnome-tweaks
-grub-customizer
 code
 )
 
