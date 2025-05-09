@@ -11,7 +11,7 @@ source <(fzf --zsh)
 # ---------------
 alias clean="~/.bin/clean.sh"
 alias update="~/.bin/update_fedora.sh"
-alias git_help="nvim ~/.bin/git_help.md"
+alias git_help="bat ~/.bin/git_help.md"
 alias grub_update="sudo grub2-mkconfig -o /boot/grub2/grub"
 alias vim="nvim"
 alias pfzf='fzf --preview="bat --color=always {}"'
