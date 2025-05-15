@@ -20,6 +20,7 @@ discord
 vlc
 gnome-tweaks
 code
+thunderbird
 )
 
 # Enable third-party repositories
