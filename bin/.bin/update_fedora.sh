@@ -7,7 +7,7 @@ echo "Starting the update process..."
 echo "Updating system packages..."
 sudo dnf update -y || {echo "System update failed!"; exit 1;}
 
-echo "Updating Flatpak packages..."
+echo -e "\nUpdating Flatpak packages..."
 flatpak update -y || { echo "Flatpak update failed!"; exit 1; }
 
 # Optionally, clean up old packages
