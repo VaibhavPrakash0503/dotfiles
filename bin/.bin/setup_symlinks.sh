@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Define the paths of the files and directories to be removed
 FILES=(

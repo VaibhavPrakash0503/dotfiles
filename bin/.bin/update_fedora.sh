@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 #This script updates system and software
 
