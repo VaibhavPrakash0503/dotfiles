@@ -74,8 +74,11 @@ install_package() {
 }
 
 #Install terminal_packages
-echo "Installing terminal packages..."
+echo "Installing packages..."
 for pkg in "${packages[@]}"; do
   install_package "$pkg"
 done
 
+# Installing multimedia
+echo "Installing multimedia support..."
+sudo dnf -y group install multimedia
