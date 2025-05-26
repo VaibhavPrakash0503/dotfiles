@@ -1,7 +1,6 @@
 # Starship prompt
 eval "$(starship init zsh)"
 
-
 HISTFILE=~/.history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -11,21 +10,18 @@ setopt HIST_IGNORE_DUPS         # Don't record duplicate entries
 setopt HIST_REDUCE_BLANKS       # Remove extra blanks
 setopt SHARE_HISTORY            # Share history across sessions
 
-#auto cd
+# auto cd
 setopt auto_cd
 
 # Enable zsh completion system
 autoload -Uz compinit
 compinit
 
-# Optional: Better tab completion behavior
+# Better tab completion behavior
 bindkey '^I' expand-or-complete
 
-#Default editor
+# Default editor
 export EDITOR="nvim"
-
-#Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
 
 # My changes
 # ---------------
@@ -45,7 +41,8 @@ alias la="ls -la"
 #fi
 # ---------------
 
-#plugins
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
+#plugin
 source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
