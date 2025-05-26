@@ -12,13 +12,13 @@ Before using this configuration, install the required tools:
 - [Ghostty](https://ghostty.org/docs/install/binary#linux-(official)) (Terminal Emulator)
 - **Martian Mono Nerd Font** (Terminal font)
 - **Neovim** (Text Editor)
-- **Oh My Zsh** (Zsh Framework)
 - [Starship](https://starship.rs/installing/) (Terminal prompt)
 - [NvChad](https://nvchad.com/docs/quickstart/install) (neovim configuration)
 - **bat** (Similar to cat used in preview for fzf)
 - [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#linux-packages) (Fuzzy finder)
 - [yazi](https://yazi-rs.github.io/docs/installation) (Terminal File manager)
 - **stow** (Used to symlink the config files easily)
+
 ## Included Configurations
 
 - **Tmux** (`.tmux.conf`)
@@ -26,7 +26,7 @@ Before using this configuration, install the required tools:
 - **Kitty Terminal** (`~/.config/kitty`)
 - **Ghostty Terminal** (`~/.config/ghostty`)
 - **Starship** (`~/.config/starship.toml`)
-- **Zsh + Oh My Zsh** (`.zshrc`, `.oh-my-zsh`)
+- **Zsh** (`.zshrc`)
 - **Custom Scripts** (`~/.bin`)
 
 ## Installation
