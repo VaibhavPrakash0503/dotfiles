@@ -30,3 +30,4 @@ alias la="ls -la"
 #plugins
 
 source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
