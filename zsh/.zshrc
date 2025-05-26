@@ -1,8 +1,26 @@
 # Starship prompt
 eval "$(starship init zsh)"
 
+
+HISTFILE=~/.history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt INC_APPEND_HISTORY       # Save each command immediately
+setopt HIST_IGNORE_DUPS         # Don't record duplicate entries
+setopt HIST_REDUCE_BLANKS       # Remove extra blanks
+setopt SHARE_HISTORY            # Share history across sessions
+
 #auto cd
 setopt auto_cd
+
+# Enable zsh completion system
+autoload -Uz compinit
+compinit
+
+# Optional: Better tab completion behavior
+bindkey '^I' expand-or-complete
+
 #Default editor
 export EDITOR="nvim"
 
