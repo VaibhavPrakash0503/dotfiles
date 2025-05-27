@@ -8,7 +8,6 @@ FILES=(
 
 FOLDERS=(
   "$HOME/.tmux"                # Folder in the home directory
-  "$HOME/.oh-my-zsh"           # Folder in the home directory
   "$HOME/.config/ghostty"      # Folder in the .config directory
   "$HOME/.config/nvim"         # Folder in the .config directory
   "$HOME/.config/starship"     # Folder in the .config directory
@@ -50,7 +49,21 @@ echo "Cleanup complete."
 
 # Use stow to create symlinks for each package
 cd "$HOME/dotfiles" || { echo "Failed to change directory"; exit 1; }
+pwd
 
-stow -vt ~ .
+PACKAGES=(
+  bin
+  ghostty
+  kitty
+  nvim
+  starship
+  tmux
+  zsh
+  zsh-plugins
+)
+
+for pkg in "${PACKAGES[@]}"; do
+  stow -v "$pkg"
+done
 
 echo "Stowing complete"
