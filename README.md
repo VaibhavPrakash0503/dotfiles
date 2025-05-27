@@ -10,7 +10,7 @@ Before using this configuration, install the required tools:
 - **Tmux** (Terminal Multiplexer)
 - **Kitty** (Terminal Emulator)
 - [Ghostty](https://ghostty.org/docs/install/binary#linux-(official)) (Terminal Emulator)
-- **Martian Mono Nerd Font** (Terminal font)
+- **Martian Mono Nerd Font** [Nerd Fonts](https://www.nerdfonts.com/) (Terminal font)
 - **Neovim** (Text Editor)
 - [Starship](https://starship.rs/installing/) (Terminal prompt)
 - [NvChad](https://nvchad.com/docs/quickstart/install) (neovim configuration)
