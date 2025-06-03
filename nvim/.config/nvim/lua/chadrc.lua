@@ -10,7 +10,7 @@ M.base46 = {
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
+	-- ["@comment"] = { italic = true },
 	-- },
 }
 
