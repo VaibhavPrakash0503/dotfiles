@@ -21,6 +21,7 @@ vlc
 gnome-tweaks
 code
 thunderbird
+qbittorrent
 )
 
 # Enable third-party repositories
