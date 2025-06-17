@@ -6,7 +6,7 @@
 - **Logo Menu** (Adds the logo at top left bar.)
 - **Switcher** (Gives a nice search bar.)
 - **Tiling Shell** (Tiling window manager.)
-- **Todo.txt** (Todo task list tracker.)
+- **Todoit** (Todo task list tracker.)
 - **Vitals** (Gives a glimpse of computer stats like Internet speed, CPU performance etc.)
 - **Caffeine** (Disable screensaver and auto suspend.)
 - **Lock Keys** (Numlock and Capslock status indicator.)
