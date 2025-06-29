@@ -46,3 +46,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 #plugin
 source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# jj jujustu VCS setup
+export PATH="$HOME/.cargo/bin:$PATH"
+autoload -U compinit
+compinit
+source <(jj util completion zsh)
