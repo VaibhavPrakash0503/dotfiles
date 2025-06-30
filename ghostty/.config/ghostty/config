@@ -4,6 +4,9 @@ theme = catppuccin-mocha
 font-family = MartianMono Nerd Font Mono
 #font-family = Meslo LGS Nerd Font Mono
 font-size = 11
+cursor-style = block
+cursor-style-blink = true
+shell-integration-features = no-cursor
 
 # This template file has been automatically created at the following
 # path since Ghostty couldn't find any existing config files on your system:
