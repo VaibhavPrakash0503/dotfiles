@@ -1,4 +1,3 @@
-![Alt Text](wallpaper/2023-Formula1-Red-Bull-Racing-RB19-008-1080.jpg)
 
 # My Config Backup
 
