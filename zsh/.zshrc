@@ -52,3 +52,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 autoload -U compinit
 compinit
 source <(jj util completion zsh)
+
+eval "$(zoxide init zsh)"
