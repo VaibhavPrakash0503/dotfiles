@@ -12,5 +12,5 @@ flatpak uninstall --unused -y || { echo "Failed to clean Flatpak runtimes!"; exi
 rm -rf ~/.cache/thumbnails/*
 
 echo "Cleaning journal logs..."
-sudo journalctl --vacuum-time=7d
+sudo journalctl --vacuum-time=14d
 echo "System cache cleared successfully!"
