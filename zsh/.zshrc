@@ -33,6 +33,7 @@ alias vim="nvim"
 alias pfzf='fzf --preview="bat --color=always {}"'
 alias nfzf='nvim $(fzf -m --preview="bat --color=always {}")'
 alias la="ls -la"
+alias suspend="systemctl suspend"
 # To make sure the shortcut of fzf works fine
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
