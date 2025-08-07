@@ -23,6 +23,9 @@ bindkey '^I' expand-or-complete
 # Default editor
 export EDITOR="nvim"
 
+
+eval "$(zoxide init zsh)"
+
 # My changes
 # ---------------
 alias clean="~/.bin/clean.sh"
@@ -36,6 +39,8 @@ alias la="ls -la"
 alias suspend="systemctl suspend"
 alias wlogin="~/.bin/wifi_login.sh"
 alias wlogout="~/.bin/wifi_logout.sh"
+alias cd="z"
+alias clear='command clear && fastfetch'
 # To make sure the shortcut of fzf works fine
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -56,5 +61,7 @@ autoload -U compinit
 compinit
 source <(jj util completion zsh)
 
-eval "$(zoxide init zsh)"
+#Run fastfetch at the start of the shell
+fastfetch
+
 
