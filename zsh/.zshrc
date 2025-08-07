@@ -37,8 +37,8 @@ alias pfzf='fzf --preview="bat --color=always {}"'
 alias nfzf='nvim $(fzf -m --preview="bat --color=always {}")'
 alias la="ls -la"
 alias suspend="systemctl suspend"
-alias wlogin="~/.bin/wifi_login.sh"
-alias wlogout="~/.bin/wifi_logout.sh"
+alias netu="~/.bin/wifi_login.sh"
+alias netd="~/.bin/wifi_logout.sh"
 alias cd="z"
 alias clear='command clear && fastfetch'
 # To make sure the shortcut of fzf works fine
