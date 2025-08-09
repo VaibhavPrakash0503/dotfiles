@@ -2,7 +2,7 @@
 
 # Replace with your real ID and password
 USERNAME="23BCE9210"
-PASSWORD="ttxJ94Mh"
+PASSWORD="Vanish@05"
 
 RESPONSE=$(curl -sk -X POST "https://hfw.vitap.ac.in:8090/login.xml" \
   -H "Content-Type: application/x-www-form-urlencoded" \
