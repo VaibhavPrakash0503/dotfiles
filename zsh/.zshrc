@@ -36,17 +36,13 @@ alias vim="nvim"
 alias pfzf='fzf --preview="bat --color=always {}"'
 alias nfzf='nvim $(fzf -m --preview="bat --color=always {}")'
 alias la="ls -la"
-alias suspend="systemctl suspend"
+#alias suspend="systemctl suspend"
 alias netu="~/.bin/wifi_login.sh"
 alias netd="~/.bin/wifi_logout.sh"
 alias cd="z"
-alias clear='command clear && fastfetch'
 # To make sure the shortcut of fzf works fine
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#if [[ -z "$TMUX" ]]; then
- # exec tmux new-session -A -s main
-#fi
 # ---------------
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
@@ -61,7 +57,10 @@ autoload -U compinit
 compinit
 source <(jj util completion zsh)
 
-#Run fastfetch at the start of the shell
-fastfetch
+# Start tmux at the start of terminal
+#if [[ -z "$TMUX" ]]; then
+#  exec tmux new-session -A -s main
+#fi
 
-
+#Temp changes
+alias get_idf='. $HOME/projects/esp/esp-idf/export.sh'
