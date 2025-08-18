@@ -58,9 +58,9 @@ compinit
 source <(jj util completion zsh)
 
 # Start tmux at the start of terminal
-#if [[ -z "$TMUX" ]]; then
-#  exec tmux new-session -A -s main
-#fi
+if [[ -z "$TMUX" ]]; then
+  exec tmux new-session -A -s main
+fi
 
 #Temp changes
 alias get_idf='. $HOME/projects/esp/esp-idf/export.sh'
