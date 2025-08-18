@@ -23,11 +23,10 @@ bindkey '^I' expand-or-complete
 # Default editor
 export EDITOR="nvim"
 
-
+# Set up zoxide
 eval "$(zoxide init zsh)"
 
-# My changes
-# ---------------
+# My alias
 alias clean="~/.bin/clean.sh"
 alias update="~/.bin/update_fedora.sh"
 alias git_help="bat ~/.bin/git_help.md"
@@ -40,14 +39,14 @@ alias suspend="systemctl suspend"
 alias netu="~/.bin/wifi_login.sh"
 alias netd="~/.bin/wifi_logout.sh"
 alias cd="z"
-# To make sure the shortcut of fzf works fine
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# ---------------
+# Set up fzf key bindings and fuzzy completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
-#plugin
+# zsh plugins
 source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
 
