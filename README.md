@@ -14,7 +14,7 @@ Before using this configuration, install the required tools:
 - **Martian Mono Nerd Font** [Nerd Fonts](https://www.nerdfonts.com/) (Terminal font)
 - **Neovim** (Text Editor)
 - [Starship](https://starship.rs/installing/) (Terminal prompt)
-- [NvChad](https://nvchad.com/docs/quickstart/install) (neovim configuration)
+- [Lazyvim](https://www.lazyvim.org/) (neovim configuration)
 - **bat** (Similar to cat used in preview for fzf)
 - [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#linux-packages) (Fuzzy finder)
 - [yazi](https://yazi-rs.github.io/docs/installation) (Terminal File manager)
@@ -23,7 +23,7 @@ Before using this configuration, install the required tools:
 ## Included Configurations
 
 - **Tmux** (`.tmux.conf`)
-- **Neovim (NvChad)** (`~/.config/nvim`)
+- **Neovim (Lazyvim)** (`~/.config/nvim`)
 - **Kitty Terminal** (`~/.config/kitty`)
 - **Ghostty Terminal** (`~/.config/ghostty`)
 - **Starship** (`~/.config/starship.toml`)
@@ -32,7 +32,7 @@ Before using this configuration, install the required tools:
 
 ## Installation
 
-1. Clone this repository to your home directory
+1. Clone this repository to your home directory.
 2. Run the install-packages.sh to install the packages.
 3. Run the setup-symlinks.sh to stow the configs.
 4. Restart your terminal for changes to take effect.
