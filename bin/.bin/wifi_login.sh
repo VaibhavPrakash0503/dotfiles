@@ -1,8 +1,21 @@
 #!/usr/bin/env bash
 
-# Replace with your real ID and password
-USERNAME="23BCE9210"
-PASSWORD="Vanish@05"
+# Configuration file path
+CONFIG_FILE="$HOME/dotfiles/bin/.bin/login_config.conf"
+
+# Check if config file exists and source it
+if [[ -f "$CONFIG_FILE" ]]; then
+  source "$CONFIG_FILE"
+else
+  echo "❌ Configuration file not found: $CONFIG_FILE"
+  echo "Please create the config file with USERNAME and PASSWORD variables"
+  exit 1
+fi
+# Validate that required variables are set
+if [[ -z "$USERNAME" || -z "$PASSWORD" ]]; then
+  echo "❌ USERNAME or PASSWORD not set in configuration file"
+  exit 1
+fi
 
 RESPONSE=$(curl -sk -X POST "https://hfw.vitap.ac.in:8090/login.xml" \
   -H "Content-Type: application/x-www-form-urlencoded" \
@@ -15,8 +28,7 @@ MESSAGE=$(echo "$RESPONSE" | grep -oP '<message><!\[CDATA\[\K[^]]+')
 
 # Display clean message
 if [[ "$STATUS" == "LIVE" ]]; then
-    echo -e "\n✅ Logged in successfully: ${MESSAGE//\{username\}/$USERNAME}"
+  echo -e "\n✅ Logged in successfully: ${MESSAGE//\{username\}/$USERNAME}"
 else
-    echo -e "\n❌ Login failed: $MESSAGE"
+  echo -e "\n❌ Login failed: $MESSAGE"
 fi
-
