@@ -39,6 +39,8 @@ alias suspend="systemctl suspend"
 alias netu="~/.bin/wifi_login.sh"
 alias netd="~/.bin/wifi_logout.sh"
 alias cd="z"
+alias install="~/.bin/fzf_install.sh"
+alias remvoe="~/.bin/fzf_remove.sh"
 
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -61,5 +63,3 @@ if [[ -z "$TMUX" ]]; then
   exec tmux new-session -A -s main
 fi
 
-#Temp changes
-alias get_idf='. $HOME/projects/esp/esp-idf/export.sh'
