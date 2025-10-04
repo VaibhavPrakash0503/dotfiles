@@ -7,12 +7,11 @@ FILES=(
 )
 
 FOLDERS=(
-  "$HOME/.tmux"                # Folder in the home directory
-  "$HOME/.config/ghostty"      # Folder in the .config directory
-  "$HOME/.config/nvim"         # Folder in the .config directory
-  "$HOME/.config/starship"     # Folder in the .config directory
+  "$HOME/.tmux"            # Folder in the home directory
+  "$HOME/.config/ghostty"  # Folder in the .config directory
+  "$HOME/.config/nvim"     # Folder in the .config directory
+  "$HOME/.config/starship" # Folder in the .config directory
 )
-
 
 # Function to safely remove files
 remove_file() {
@@ -46,9 +45,11 @@ done
 
 echo "Cleanup complete."
 
-
 # Use stow to create symlinks for each package
-cd "$HOME/dotfiles" || { echo "Failed to change directory"; exit 1; }
+cd "$HOME/dotfiles" || {
+  echo "Failed to change directory"
+  exit 1
+}
 pwd
 
 PACKAGES=(

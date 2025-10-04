@@ -30,5 +30,5 @@ MESSAGE=$(echo "$RESPONSE" | grep -oP '<message><!\[CDATA\[\K[^]]+')
 if [[ "$STATUS" == "LIVE" ]]; then
   echo -e "\n✅ Logged in successfully: ${MESSAGE//\{username\}/$USERNAME}"
 else
-  echo -e "\n❌ Login failed: $MESSAGE"
+  echo -e "\n❌ $MESSAGE"
 fi

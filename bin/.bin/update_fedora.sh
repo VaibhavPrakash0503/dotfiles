@@ -5,16 +5,17 @@
 echo "Starting the update process..."
 
 echo "Updating system packages..."
-sudo dnf update -y || { echo "System update failed!"; exit 1; }
+sudo dnf update -y || {
+  echo "System update failed!"
+  exit 1
+}
 
 echo -e "\nUpdating Flatpak packages..."
-flatpak update -y || { echo "Flatpak update failed!"; exit 1; }
+flatpak update -y || {
+  echo "Flatpak update failed!"
+  exit 1
+}
 
-# Optionally, clean up old packages
-echo "Cleaning up old packages..."
-sudo dnf autoremove -y || { echo "Failed to clean up packages!"; exit 1; }
-
-echo "Cleaning unused Flatpak runtimes..."
-flatpak uninstall --unused -y || { echo "Failed to clean Flatpak runtimes!"; exit 1; }
-
-echo "Update process complete!"
+# clean up old packages via the clean.sh script
+echo ""
+./.bin/clean.sh

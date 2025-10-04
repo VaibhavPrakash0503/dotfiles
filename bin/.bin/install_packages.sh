@@ -20,7 +20,6 @@ packages=(
   vlc
   gnome-tweaks
   code
-  thunderbird
   qbittorrent
 )
 
