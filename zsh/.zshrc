@@ -63,8 +63,5 @@ if [[ -z "$TMUX" ]]; then
   exec tmux new-session -A -s main
 fi
 
-# Set cursor to vertical bar (blinking)
-echo -ne '\e[5 q'
-
 # Auto activate env on cd into directory
 eval "$(direnv hook zsh)"
