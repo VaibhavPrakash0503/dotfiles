@@ -40,7 +40,7 @@ alias netu="~/.bin/wifi_login.sh"
 alias netd="~/.bin/wifi_logout.sh"
 alias cd="z"
 alias install="~/.bin/fzf_install.sh"
-alias remvoe="~/.bin/fzf_remove.sh"
+alias remove="~/.bin/fzf_remove.sh"
 
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -53,13 +53,18 @@ source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # jj jujustu VCS setup
-export PATH="$HOME/.cargo/bin:$PATH"
-autoload -U compinit
-compinit
-source <(jj util completion zsh)
+# export PATH="$HOME/.cargo/bin:$PATH"
+# autoload -U compinit
+# compinit
+# source <(jj util completion zsh)
 
 # Start tmux at the start of terminal
 if [[ -z "$TMUX" ]]; then
   exec tmux new-session -A -s main
 fi
 
+# Set cursor to vertical bar (blinking)
+echo -ne '\e[5 q'
+
+# Auto activate env on cd into directory
+eval "$(direnv hook zsh)"
