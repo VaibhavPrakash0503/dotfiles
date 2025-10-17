@@ -40,7 +40,7 @@ if ! sudo dnf copr list | grep "pgdev/ghostty"; then
   echo "Enabling Ghostty COPR..."
   sudo dnf copr enable pgdev/ghostty -y
 else
-  echo "Ghostty COPR already eanbled"
+  echo "Ghostty COPR already enabled"
 fi
 
 # 3. yazi
@@ -49,6 +49,14 @@ if ! sudo dnf copr list | grep "lihaohong/yazi"; then
   sudo dnf copr enable lihaohong/yazi -y
 else
   echo "yazi COPR already enabled"
+fi
+
+# 4. lazygit
+if ! sudo dnf repolist | grep -q "/dejan/lazygit"; then
+  echo "Enabling Lazygit COPR..."
+  sudo dnf copr enable dejan/lazygit -y
+else
+  echo "Lazygit COPR alredy enabled"
 fi
 
 # Install a package with error handling
