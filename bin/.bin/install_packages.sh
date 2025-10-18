@@ -20,6 +20,7 @@ packages=(
   vlc
   gnome-tweaks
   code
+  lazygit
   qbittorrent
 )
 

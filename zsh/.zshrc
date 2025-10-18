@@ -1,3 +1,5 @@
+export PATH="$HOME/.local/bin:$PATH"
+
 # Starship prompt
 eval "$(starship init zsh)"
 
@@ -41,6 +43,7 @@ alias netd="~/.bin/wifi_logout.sh"
 alias cd="z"
 alias install="~/.bin/fzf_install.sh"
 alias remove="~/.bin/fzf_remove.sh"
+alias lgt="lazygit"
 
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
