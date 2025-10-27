@@ -33,16 +33,17 @@ return {
           },
         },
       },
-      setup = {
-        -- Disable Ruff's hover in favor of Pyright
-        ruff = function()
-          require("lazyvim.util").lsp.on_attach(function(client, _)
-            if client.name == "ruff" then
+      init = function()
+        vim.api.nvim_create_autocmd("LspAttach", {
+          callback = function(args)
+            local client = vim.lsp.get_client_by_id(args.data.client_id)
+            if client and client.name == "ruff" then
+              -- Disable Ruff's hover in favor of Pyright
               client.server_capabilities.hoverProvider = false
             end
-          end, "ruff")
-        end,
-      },
+          end,
+        })
+      end,
     },
   },
 }
