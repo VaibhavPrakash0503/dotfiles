@@ -15,6 +15,9 @@ flatpak uninstall --unused -y || {
 }
 
 #cleaning thumbnail
-rm -rf ~/.cache/thumbnails/*
+rm -rf ~/.cache/thumbnails/* || {
+  echo "Failed to clean thumbnails!"
+  exit 1
+}
 
 echo "System cache cleared successfully!"
