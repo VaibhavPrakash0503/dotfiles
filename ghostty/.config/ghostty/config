@@ -5,7 +5,8 @@ font-family = JetBrainsMono Nerd Font
 # font-family = FiraCode Nerd Font
 font-size = 11.5
 #start in fullscreen mode
-fullscreen = true
+window-width = 1920
+window-height = 1080
 # This template file has been automatically created at the following
 # path since Ghostty couldn't find any existing config files on your system:
 #
