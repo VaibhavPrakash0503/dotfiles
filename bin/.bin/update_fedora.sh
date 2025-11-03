@@ -18,4 +18,4 @@ flatpak update -y || {
 
 # clean up old packages via the clean.sh script
 echo ""
-./.bin/clean.sh
+~/.bin/clean.sh
