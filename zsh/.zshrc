@@ -23,8 +23,6 @@ zshaddhistory() {
   [[ $1 != ${~HISTORY_IGNORE} ]]
 }
 
-# auto cd
-setopt auto_cd
 
 # Enable zsh completion system
 autoload -Uz compinit
@@ -66,6 +64,9 @@ fi
 
 # Auto activate env on cd into directory
 eval "$(direnv hook zsh)"
+
+export PATH="$PATH:$HOME/go/bin"
+
 # zsh plugins
 source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

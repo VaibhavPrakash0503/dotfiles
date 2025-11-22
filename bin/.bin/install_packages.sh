@@ -7,6 +7,7 @@ packages=(
   dnf-plugins-core
   zsh
   ghostty
+  kitty
   tmux
   starship
   vim
