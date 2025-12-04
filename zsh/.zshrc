@@ -49,8 +49,8 @@ alias netd='~/.bin/wifi_logout.sh'
 alias cd='z'
 alias install='~/.bin/fzf_install.sh'
 alias remove='~/.bin/fzf_remove.sh'
-alias lgt='lazygit'
-alias ldc='lazydocker'
+alias lzg='lazygit'
+alias lzd='lazydocker'
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -66,6 +66,13 @@ fi
 eval "$(direnv hook zsh)"
 
 export PATH="$PATH:$HOME/go/bin"
+
+# Set Cursor
+# 5 blinking beam
+# 6 for steady beam
+precmd() {
+    echo -ne '\e[6 q'
+}
 
 # zsh plugins
 source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
