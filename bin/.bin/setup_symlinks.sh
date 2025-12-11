@@ -11,6 +11,7 @@ FOLDERS=(
   "$HOME/.config/ghostty"  # Folder in the .config directory
   "$HOME/.config/nvim"     # Folder in the .config directory
   "$HOME/.config/starship" # Folder in the .config directory
+  "$HOME/.config/fastfetch"
 )
 
 # Function to safely remove files
@@ -61,6 +62,7 @@ PACKAGES=(
   tmux
   zsh
   zsh-plugins
+  fastfetch
 )
 
 for pkg in "${PACKAGES[@]}"; do
