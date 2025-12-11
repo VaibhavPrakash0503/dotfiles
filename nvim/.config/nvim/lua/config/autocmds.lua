@@ -6,3 +6,11 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+--- Lua
+vim.o.autowriteall = true
+vim.api.nvim_create_autocmd({ "InsertLeavePre", "TextChanged", "TextChangedP" }, {
+  pattern = "*",
+  callback = function()
+    vim.cmd("silent! write")
+  end,
+})
