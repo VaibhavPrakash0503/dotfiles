@@ -13,22 +13,14 @@ packages=(
   fastfetch
   yazi
   stow
+  scrcpy
+  starship
   jetbrains-mono-fonts
   jetbrains-mono-nl-fonts
 )
 
 # Install Starship separately
 echo ""
-echo -e "${BLUE}[Installing]${NC} Starship"
-if ! command -v starship &>/dev/null; then
-  echo "Installing Starship..."
-  curl -sS https://starship.rs/install.sh | sh -s -- -y
-  print_success "Starship installed"
-else
-  print_warning "Starship already installed"
-fi
-print_separator
-
 # Install terminal packages
 for pkg in "${packages[@]}"; do
   install_dnf_package "$pkg"

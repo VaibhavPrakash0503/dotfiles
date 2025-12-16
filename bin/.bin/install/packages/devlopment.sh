@@ -9,6 +9,7 @@ packages=(
   neovim
   git
   gh
+  direnv
 )
 
 for pkg in "${packages[@]}"; do
