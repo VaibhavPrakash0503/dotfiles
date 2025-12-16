@@ -7,11 +7,11 @@ FILES=(
 )
 
 FOLDERS=(
-  "$HOME/.tmux"            # Folder in the home directory
   "$HOME/.config/ghostty"  # Folder in the .config directory
   "$HOME/.config/nvim"     # Folder in the .config directory
   "$HOME/.config/starship" # Folder in the .config directory
   "$HOME/.config/fastfetch"
+  "$HOME/.config/kitty"
 )
 
 # Function to safely remove files
