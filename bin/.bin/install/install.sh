@@ -2,6 +2,20 @@
 
 set -e # exit on error
 
+# Cleanup function for graceful exit
+cleanup() {
+  echo ""
+  echo ""
+  echo -e "${RED}╔════════════════════════════════════════╗${NC}"
+  echo -e "${RED}║  Installation interrupted by user.     ║${NC}"
+  echo -e "${RED}║  Exiting...                            ║${NC}"
+  echo -e "${RED}╚════════════════════════════════════════╝${NC}"
+  kill -INT -$$
+}
+
+# Trap Ctrl+C and call cleanup
+trap cleanup SIGINT
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Scorce helper functions
@@ -12,19 +26,19 @@ print_header "Starting Installation Process"
 # Enable repository
 
 print_section "Setting up repositories"
-bash "$SCRIPT_DIR/repos/vscode.sh"
-bash "$SCRIPT_DIR/repos/coprs.sh"
-bash "$SCRIPT_DIR/repos/flatpak.sh"
-bash "$SCRIPT_DIR/repos/docker.sh"
+source "$SCRIPT_DIR/repos/vscode.sh"
+source "$SCRIPT_DIR/repos/coprs.sh"
+source "$SCRIPT_DIR/repos/flatpak.sh"
+source "$SCRIPT_DIR/repos/docker.sh"
 
 # Install packages
 print_section "Installing packages"
-bash "$SCRIPT_DIR/packages/terminal.sh"
-bash "$SCRIPT_DIR/packages/devlopment.sh"
-bash "$SCRIPT_DIR/packages/desktop.sh"
+source "$SCRIPT_DIR/packages/terminal.sh"
+source "$SCRIPT_DIR/packages/devlopment.sh"
+source "$SCRIPT_DIR/packages/desktop.sh"
 
 # Install flatpak apps
 print_section "Installing flatpak applications"
-bash "$SCRIPT_DIR/packages/flatpak.sh"
+source "$SCRIPT_DIR/packages/flatpak.sh"
 
 print_header "Installation Complete!"
