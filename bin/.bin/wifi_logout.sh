@@ -5,6 +5,7 @@ CONFIG_FILE="$HOME/dotfiles/bin/.bin/login_config.conf"
 
 # Check if config file exists and source it
 if [[ -f "$CONFIG_FILE" ]]; then
+  # shellcheck source=./login_config.conf
   source "$CONFIG_FILE"
 else
   echo "❌ Configuration file not found: $CONFIG_FILE"
@@ -26,11 +27,12 @@ RESPONSE=$(curl -sk -X POST "https://hfw.vitap.ac.in:8090/logout.xml" \
 STATUS=$(echo "$RESPONSE" | grep -oP '<status><!\[CDATA\[\K[^]]+')
 MESSAGE=$(echo "$RESPONSE" | grep -oP '<message><!\[CDATA\[\K[^]]+')
 
-DECODED_MESSAGE=$(echo "$MESSAGE" | sed "s/&#39;/'/g")
+# DECODED_MESSAGE=$(echo "$MESSAGE" | sed "s/&#39;/'/g")
+DECODED_MESSAGE="${MESSAGE//&#39;/\'}"
 
 # Display clean message
 if [[ "$STATUS" == "LOGIN" ]]; then
-  echo -e "\n👋 Logged out successfully: $DECODED_MESSAGED"
+  echo -e "\n👋 Logged out successfully: $DECODED_MESSAGE"
 else
   echo -e "\n⚠️ Logout failed: $DECODED_MESSAGE"
 fi

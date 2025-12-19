@@ -5,6 +5,7 @@ CONFIG_FILE="$HOME/dotfiles/bin/.bin/login_config.conf"
 
 # Check if config file exists and source it
 if [[ -f "$CONFIG_FILE" ]]; then
+  # shellcheck source=./login_config.conf
   source "$CONFIG_FILE"
 else
   echo "❌ Configuration file not found: $CONFIG_FILE"
