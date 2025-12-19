@@ -15,6 +15,7 @@ packages=(
   stow
   scrcpy
   starship
+  tldr
 )
 
 # Install terminal packages
@@ -26,19 +27,24 @@ done
 echo ""
 echo -e "${BLUE}[Installing]${NC} JetBrainsMono Nerd Font"
 
-cd ~/Downloads
-wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+if ! cd "$HOME/Downloads"; then
+  print_error "Failed to change to Downloads directory. Skipping font installation."
+else
+  if ! wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz; then
+    print_error "Failed to download fonts."
+  else
+    mkdir -p "$HOME/.fonts/JetBrainsMono"
+    tar -xf JetBrainsMono.tar.xz -C ~/.fonts/JetBrainsMono
 
-mkdir -p ~/.fonts/JetBrainsMono
-tar -xf JetBrainsMono.tar.xz -C ~/.fonts/JetBrainsMono
-
-rm JetBrainsMono.tar.xz
+    rm JetBrainsMono.tar.xz
+  fi
+fi
 print_separator
 
 # Create .tmux/plugins folder and clone tmp
 echo ""
 echo -e "${BLUE}[Installing]${NC} TPM for Tmux"
-mkdir -p $HOME/.tmux/plugins
+mkdir -p "$HOME/.tmux/plugins"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 print_separator

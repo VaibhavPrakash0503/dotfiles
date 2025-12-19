@@ -22,7 +22,7 @@ print_section() {
 }
 
 print_error() {
-  echo -e "${RED}Error: $1${NC}"
+  echo -e "${RED}Error: $1${NC}" >&2
 }
 
 print_success() {
