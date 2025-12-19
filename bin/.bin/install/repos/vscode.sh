@@ -4,7 +4,7 @@ source "$(dirname "${BASH_SOURCE[0]}")/../helpers.sh"
 
 if repo_enabled "code"; then
   print_warning "VS Code repo already enabled"
-  exit 0
+  return 0
 fi
 
 print_section "Adding VS Code repository"
