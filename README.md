@@ -26,7 +26,7 @@ You do **not** need to install any prerequisites manually. The `install.sh` scri
 
 ```
 git clone https://github.com/VaibhavPrakash0503/dotfiles.git ~/dotfiles
-cd ~/dotfiles/bin/.bin/install/install.sh
+cd ~/dotfiles/bin/.bin/install
 ./install.sh
 ```
 
