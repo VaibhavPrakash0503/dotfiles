@@ -15,6 +15,7 @@ print_section "Setting up repositories"
 bash "$SCRIPT_DIR/repos/vscode.sh"
 bash "$SCRIPT_DIR/repos/coprs.sh"
 bash "$SCRIPT_DIR/repos/flatpak.sh"
+bash "$SCRIPT_DIR/repos/docker.sh"
 
 # Install packages
 print_section "Installing packages"

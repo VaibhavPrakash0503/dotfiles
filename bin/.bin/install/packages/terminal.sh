@@ -18,8 +18,20 @@ packages=(
   tldr
 )
 
+docker=(
+  docker-ce
+  docker-ce-cli
+  containerd.io
+  docker-buildx-plugin
+  docker-compose-plugin
+)
+
 # Install terminal packages
 for pkg in "${packages[@]}"; do
+  install_dnf_package "$pkg"
+done
+
+for pkg in "${docker[@]}"; do
   install_dnf_package "$pkg"
 done
 
