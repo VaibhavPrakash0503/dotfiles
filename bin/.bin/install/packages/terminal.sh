@@ -4,7 +4,7 @@ source "$(dirname "${BASH_SOURCE[0]}")/../helpers.sh"
 
 packages=(
   zsh
-  ghostty
+  #ghostty
   kitty
   tmux
   vim
@@ -16,6 +16,7 @@ packages=(
   scrcpy
   starship
   tldr
+  btop
 )
 
 docker=(
