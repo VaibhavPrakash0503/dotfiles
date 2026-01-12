@@ -1,4 +1,4 @@
-# My Config Backup
+# Fedora Workstation
 
 This repository contains my personal configuration files and setup scripts for various tools, ensuring a consistent setup across different Fedora machines.
 
