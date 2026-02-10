@@ -7,6 +7,7 @@ return {
   },
   opts = {
     model = "claude-sonnet-4.5",
+    show_models = true,
     temperature = 0.1,
 
     prompts = {
