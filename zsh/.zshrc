@@ -17,7 +17,7 @@ setopt HIST_SAVE_NO_DUPS        # Don't write duplicates to history file
 setopt HIST_EXPIRE_DUPS_FIRST   # Expire duplicates first when trimming
 
 # Ignore common commands
-HISTORY_IGNORE="(ls|cd|pwd|exit|clear)"
+HISTORY_IGNORE="(ls|cd|pwd|exit|clear|ll|ls -a)"
 zshaddhistory() {
   emulate -L zsh
   [[ $1 != ${~HISTORY_IGNORE} ]]
@@ -37,7 +37,6 @@ eval "$(zoxide init zsh)"
 # My alias
 alias clean='~/.bin/clean.sh'
 alias update='~/.bin/update_fedora.sh'
-alias git_help='bat ~/.bin/git_help.md'
 alias grub_update='sudo grub2-mkconfig -o /boot/grub2/grub'
 alias vim='nvim'
 alias pfzf='fzf --preview="bat --color=always {}"'
