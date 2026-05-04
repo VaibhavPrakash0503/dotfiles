@@ -1,4 +1,4 @@
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bin:$HOME/.local/bin:$PATH:$HOME/.cargo/bin:$PATH"
 # Default editor
 export EDITOR="nvim"
 
@@ -35,8 +35,8 @@ bindkey '^I' expand-or-complete
 eval "$(zoxide init zsh)"
 
 # My alias
-alias clean='~/.bin/clean.sh'
-alias update='~/.bin/update_fedora.sh'
+alias clean='clean.sh'
+alias update='update_fedora.sh'
 alias grub_update='sudo grub2-mkconfig -o /boot/grub2/grub'
 alias vim='nvim'
 alias pfzf='fzf --preview="bat --color=always {}"'
@@ -44,10 +44,12 @@ alias nfzf='nvim $(fzf -m --preview="bat --color=always {}")'
 alias la='ls -la'
 alias suspend='systemctl suspend'
 alias cd='z'
-alias install='~/.bin/fzf_install.sh'
-alias remove='~/.bin/fzf_remove.sh'
+alias install='fzf_install.sh'
+alias remove='fzf_remove.sh'
 alias lzg='lazygit'
 alias lzd='lazydocker'
+alias ff='fastfetch'
+alias lf='yazi'
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
