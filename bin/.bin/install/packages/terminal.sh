@@ -36,29 +36,31 @@ for pkg in "${docker[@]}"; do
   install_dnf_package "$pkg"
 done
 
-# Insallig JetBrainsMono Nerd Fornt
+# Install JetBrainsMono Nerd Fornt
 echo ""
 echo -e "${BLUE}[Installing]${NC} JetBrainsMono Nerd Font"
 
-if ! cd "$HOME/Downloads"; then
+if [[ -d "$HOME/.fonts/JetBrainsMono" ]]; then
+  print_warning "JetBrainsMono Nerd Font already installed"
+elif ! cd "$HOME/Downloads"; then
   print_error "Failed to change to Downloads directory. Skipping font installation."
+elif ! wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz; then
+  print_error "Failed to download fonts."
 else
-  if ! wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz; then
-    print_error "Failed to download fonts."
-  else
-    mkdir -p "$HOME/.fonts/JetBrainsMono"
-    tar -xf JetBrainsMono.tar.xz -C ~/.fonts/JetBrainsMono
-
-    rm JetBrainsMono.tar.xz
-  fi
+  mkdir -p "$HOME/.fonts/JetBrainsMono"
+  tar -xf JetBrainsMono.tar.xz -C ~/.fonts/JetBrainsMono
+  rm JetBrainsMono.tar.xz
+  print_success "JetBrainsMono Nerd Font installed"
 fi
 print_separator
 
 # Create .tmux/plugins folder and clone tmp
 echo ""
-echo -e "${BLUE}[Installing]${NC} TPM for Tmux"
-mkdir -p "$HOME/.tmux/plugins"
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [[ ! -d "$HOME/.tmux/plugins/tpm" ]]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+else
+  print_warning "TPM already installed"
+fi
 
 print_separator
 

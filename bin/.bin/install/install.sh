@@ -10,7 +10,7 @@ cleanup() {
   echo -e "${RED}║  Installation interrupted by user.     ║${NC}"
   echo -e "${RED}║  Exiting...                            ║${NC}"
   echo -e "${RED}╚════════════════════════════════════════╝${NC}"
-  kill -INT -$$
+  exit 1
 }
 
 # Trap Ctrl+C and call cleanup
@@ -18,7 +18,7 @@ trap cleanup SIGINT
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Scorce helper functions
+# Source helper functions
 source "$SCRIPT_DIR/helpers.sh"
 
 print_header "Starting Installation Process"

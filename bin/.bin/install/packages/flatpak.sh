@@ -6,7 +6,6 @@ source "$(dirname "${BASH_SOURCE[0]}")/../helpers.sh"
 flatpak_apps=(
   "app.zen_browser.zen|Zen Browser"
   "com.spotify.Client|Spotify"
-  "com.discordapp.Discord|Discord"
   "net.davidotek.pupgui2|ProtonUP-Qt"
   "com.mattjakeman.ExtensionManager|ExtensionManager"
 )
