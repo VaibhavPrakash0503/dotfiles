@@ -4,12 +4,18 @@
 DNF=false
 FLATPAK=false
 
-while getopts "df" opt; do
+while getopts ":dfc" opt; do
   case $opt in
   d) DNF=true ;;
   f) FLATPAK=true ;;
+  c)
+    sudo dnf check-update
+    flatpak remote-ls --updates
+    exit 0
+    ;;
   *)
-    echo "Usage: $0 [-d] [-f]"
+    echo "unrecognized option '-$OPTARG'"
+    echo "Usage: update [-d] [-f]"
     echo "  -d  Update system packages using DNF"
     echo "  -f  Update Flatpak packages"
     exit 1
@@ -41,4 +47,7 @@ fi
 
 # clean up old packages via the clean.sh script
 echo ""
-~/.bin/clean.sh
+if [ -x ~/.bin/clean.sh ]; then
+  echo "Cleaning up old packages..."
+  ~/.bin/clean.sh
+fi
