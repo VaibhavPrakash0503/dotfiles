@@ -35,8 +35,14 @@ bindkey '^I' expand-or-complete
 eval "$(zoxide init zsh)"
 
 # My alias
+# Custom scripts
 alias clean='clean.sh'
 alias update='update_fedora.sh'
+alias install='fzf_install.sh'
+alias remove='fzf_remove.sh'
+alias passf='pass_fzf.sh'
+
+# Custom commands
 alias grub_update='sudo grub2-mkconfig -o /boot/grub2/grub'
 alias vim='nvim'
 alias pfzf='fzf --preview="bat --color=always {}"'
@@ -45,9 +51,6 @@ alias la='ls -la --color=auto'
 alias rm='rm -i'
 alias mv='mv -i'
 alias suspend='systemctl suspend'
-alias cd='z'
-alias install='fzf_install.sh'
-alias remove='fzf_remove.sh'
 alias lzg='lazygit'
 alias lzd='lazydocker'
 alias ff='fastfetch'
