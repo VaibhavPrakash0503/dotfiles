@@ -44,6 +44,7 @@ alias passf='pass_fzf.sh'
 
 # Custom commands
 alias grub_update='sudo grub2-mkconfig -o /boot/grub2/grub'
+alias cd='z'
 alias vim='nvim'
 alias pfzf='fzf --preview="bat --color=always {}"'
 alias nfzf='nvim $(fzf -m --preview="bat --color=always {}")'
