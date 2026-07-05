@@ -1,23 +1,25 @@
 #!/usr/bin/env bash
 
-echo "Clearing system cache and temporary files..."
+source "$HOME/.bin/utils/colors.sh"
 
-echo "Cleaning up old packages..."
+info "Clearing system cache and temporary files..."
+
+info "Cleaning up old packages..."
 sudo dnf autoremove -y || {
-  echo "Failed to clean up packages!"
+  error "Failed to clean up packages!"
   exit 1
 }
 
-echo "Cleaning unused Flatpak runtimes..."
+info "Cleaning unused Flatpak runtimes..."
 flatpak uninstall --unused -y || {
-  echo "Failed to clean Flatpak runtimes!"
+  error "Failed to clean Flatpak runtimes!"
   exit 1
 }
 
 #cleaning thumbnail
 rm -rf ~/.cache/thumbnails/* || {
-  echo "Failed to clean thumbnails!"
+  error "Failed to clean thumbnails!"
   exit 1
 }
 
-echo "System cache cleared successfully!"
+success "System cache cleared successfully!"
