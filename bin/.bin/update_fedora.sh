@@ -77,7 +77,7 @@ if $DNF; then
 fi
 
 if $FLATPAK; then
-  info -e "\nUpdating Flatpak packages..."
+  info "\nUpdating Flatpak packages..."
   flatpak update -y || {
     error "Flatpak update failed!"
     exit 1
