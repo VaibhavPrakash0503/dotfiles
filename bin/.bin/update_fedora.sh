@@ -4,17 +4,52 @@
 DNF=false
 FLATPAK=false
 
-while getopts ":dfc" opt; do
-  case $opt in
-  d) DNF=true ;;
-  f) FLATPAK=true ;;
-  c)
-    sudo dnf check-update
-    flatpak remote-ls --updates
+check_updates() {
+  echo "Checking for system updates..."
+  sudo dnf check-update || {
+    echo "Failed to check for system updates!"
+    exit 1
+  }
+
+  printf "\nChecking for Flatpak updates..."
+  flatpak remote-ls --updates || {
+    echo "Failed to check for Flatpak updates!"
+    exit 1
+  }
+
+  printf "\nChecking for firmware updates..."
+  sudo fwupdmgr get-updates
+  local fw_exit=$?
+  if [[ $fw_exit -ne 0 && $fw_exit -ne 2 ]]; then
+    echo "Failed to check for firmware updates!"
+    exit 1
+  fi
+
+  exit 0
+}
+
+while [[ $# -gt 0 ]]; do
+  case $1 in
+  -d)
+    DNF=true
+    shift
+    ;;
+  -f)
+    FLATPAK=true
+    shift
+    ;;
+  -c)
+    check_updates
+    ;;
+  -fr)
+    sudo fwupdmgr update || {
+      echo "Firmware update failed!"
+      exit 1
+    }
     exit 0
     ;;
   *)
-    echo "unrecognized option '-$OPTARG'"
+    echo "unrecognized option '$1'"
     echo "Usage: update [-d] [-f]"
     echo "  -d  Update system packages using DNF"
     echo "  -f  Update Flatpak packages"
