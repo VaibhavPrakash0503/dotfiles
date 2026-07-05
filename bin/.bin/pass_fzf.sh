@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+source "$HOME/.bin/utils/colors.sh"
+
 # Use pass with fzf to fuzzy find password
 
 copy=false
@@ -10,9 +12,11 @@ while getopts ":c" opt; do
     copy=true
     ;;
   \?)
-    echo "unrecognized option '-$OPTARG'"
-    echo "Usage: passf [-c]"
-    echo "  -c  Copy the password to the clipboard"
+    warn "unrecognized option '-$OPTARG'"
+    warn "Usage: pass"
+    warn "No arguments show the password"
+    warn "Usage: passf [-c]"
+    warn "  -c  Copy the password to the clipboard"
     exit 1
     ;;
   esac
@@ -26,7 +30,7 @@ fi
 
 if [ "$copy" = true ]; then
   pass show "$entry" | xclip -selection clipboard
-  echo "Password for '$entry' copied to clipboard."
+  success "Password for '$entry' copied to clipboard."
 else
   # No option given -> show password
   pass show "$entry"

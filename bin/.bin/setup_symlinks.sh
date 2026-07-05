@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source "$HOME/.bin/utils/colors.sh"
+
 # Define the paths of the files and directories to be removed
 FILES=(
   "$HOME/.zshrc"
@@ -7,30 +9,32 @@ FILES=(
 )
 
 FOLDERS=(
-  "$HOME/.config/ghostty"  # Folder in the .config directory
-  "$HOME/.config/nvim"     # Folder in the .config directory
-  "$HOME/.config/starship" # Folder in the .config directory
+  "$HOME/.config/ghostty"
+  "$HOME/.config/nvim"
+  "$HOME/.config/starship"
   "$HOME/.config/fastfetch"
   "$HOME/.config/kitty"
+  "$HOME/.config/zsh-syntax-highlighting"
+  "$HOME/.config/zsh-autosuggestions"
 )
 
 # Function to safely remove files
 remove_file() {
   if [ -f "$1" ] || [ -L "$1" ]; then
-    echo "Removing file: $1"
+    warn "Removing file: $1"
     rm -r "$1"
   else
-    echo "No file found: $1"
+    warn "No file found: $1"
   fi
 }
 
 # Function to safely remove directories
 remove_directory() {
   if [ -d "$1" ]; then
-    echo "Removing directory: $1"
+    warn "Removing directory: $1"
     rm -rf "$1"
   else
-    echo "No directory found: $1"
+    warn "No directory found: $1"
   fi
 }
 
@@ -44,11 +48,12 @@ for DIR in "${FOLDERS[@]}"; do
   remove_directory "$DIR"
 done
 
-echo "Cleanup complete."
+success "Cleanup complete."
 
 # Use stow to create symlinks for each package
 cd "$HOME/dotfiles" || {
-  echo "Failed to change directory"
+  error "Failed to change directory"
+  error "Exiting"
   exit 1
 }
 pwd
@@ -69,4 +74,4 @@ for pkg in "${PACKAGES[@]}"; do
   stow -v "$pkg"
 done
 
-echo "Stowing complete"
+success "Stowing complete"
