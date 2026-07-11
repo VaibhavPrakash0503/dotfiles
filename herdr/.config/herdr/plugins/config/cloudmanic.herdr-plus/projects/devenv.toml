@@ -11,7 +11,8 @@ command = "agy --conversation=6bbb5e1c-afa4-4ebc-9780-8122eaf89eb5"
 
 [[tabs]]
 name = "git"
-command = "lazygit"
+command = "cd ~/Dev/projects/DevEnv && lazygit"
 
 [[tabs]]
-name = "terminal"
+name = "termial"
+command = "cd ~/Dev/projects/DevEnv"

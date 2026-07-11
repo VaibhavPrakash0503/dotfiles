@@ -31,6 +31,9 @@ new_workspace    = "prefix+shift+w"
 rename_workspace = "prefix+$"
 goto = "prefix+s"
 
+previous_workspace = "prefix+["
+next_workspace     = "prefix+]"
+
 # Tab management
 rename_tab       = "prefix+comma"
 # switch_tab     = "prefix+1..9"   # uncomment if you want it
@@ -61,3 +64,9 @@ key = "prefix+y"
 type = "plugin_action"
 command = "cloudmanic.herdr-plus.quick-actions"
 description = "herdr-plus: quick-actions"
+
+[[keys.command]]
+key         = "prefix+shift+t"
+type        = "plugin_action"
+command     = "jwarykowski.herdr-shepherd.open-overlay"
+description = "shepherd todo overlay"
