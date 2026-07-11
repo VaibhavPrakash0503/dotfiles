@@ -4,3 +4,5 @@ bin/.bin/login_config.conf
 
 # herdr
 herdr/.config/herdr/*.sock
+herdr/.config/herdr/plugins/github
+herdr/.config/herdr/*.json
