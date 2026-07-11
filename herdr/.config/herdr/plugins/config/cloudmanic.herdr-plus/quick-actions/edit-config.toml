@@ -1,0 +1,25 @@
+name = "Edit Config Files"
+description = "Select which config to edit"
+type = "select"
+command = "nvim ~/{{.Value}}"
+
+[[options]]
+label = "dotfiles"
+value = "dotfiles/"
+
+[[options]]
+label = "zshrc"
+value = "zshrc"
+
+[[options]]
+label = "nvim config"
+value = ".config/nvim/"
+
+[[options]]
+label = "herdr config"
+value = ".config/herdr/config.toml"
+
+[[options]]
+label = "herdr-plus config"
+value = ".config/herdr/plugins/config/cloudmanic.herdr-plus/"
+

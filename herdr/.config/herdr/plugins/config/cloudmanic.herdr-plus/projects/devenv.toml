@@ -1,0 +1,17 @@
+name = "DevEnv"
+working_dir = "~/Dev/projects/DevEnv"
+
+[[tabs]]
+name = "code"
+command = "vim"
+
+[[tabs]]
+name = "agent"
+command = "agy --conversation=6bbb5e1c-afa4-4ebc-9780-8122eaf89eb5"
+
+[[tabs]]
+name = "git"
+command = "lazygit"
+
+[[tabs]]
+name = "terminal"

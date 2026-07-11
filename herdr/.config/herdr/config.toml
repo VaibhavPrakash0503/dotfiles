@@ -1,0 +1,63 @@
+onboarding = false
+
+[ui.sound]
+enabled = false
+
+[ui.toast]
+delivery = "system"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+prompt_new_tab_name = false
+
+agent_panel_sort = "spaces"
+[theme]
+name = "catppuccin"
+
+[terminal]
+new_cwd = "home"
+
+[update]
+# channel = "stable"
+
+[keys]
+prefix = "ctrl+space"
+# Mirror your bind r / bind R
+reload_config = "prefix+r"
+
+
+# Workspace/tab management (closest to tmux windows)
+new_workspace    = "prefix+shift+w"
+rename_workspace = "prefix+$"
+goto = "prefix+s"
+
+# Tab management
+rename_tab       = "prefix+comma"
+# switch_tab     = "prefix+1..9"   # uncomment if you want it
+
+
+# Misc
+settings         = "prefix+;"
+detach           = "prefix+q"
+
+[session]
+resume_agents_on_restore = true
+
+[remote]
+# manage_ssh_config = true
+
+[experimental]
+pane_history = false
+
+[[keys.command]]
+key = "prefix+O"
+type = "plugin_action"
+command = "cloudmanic.herdr-plus.projects"
+description = "herdr-plus: projects"
+
+
+[[keys.command]]
+key = "prefix+y"
+type = "plugin_action"
+command = "cloudmanic.herdr-plus.quick-actions"
+description = "herdr-plus: quick-actions"

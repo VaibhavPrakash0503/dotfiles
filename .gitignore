@@ -1,1 +1,6 @@
 bin/.bin/login_config.conf
+
+*.log
+
+# herdr
+herdr/.config/herdr/*.sock
