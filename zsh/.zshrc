@@ -1,4 +1,4 @@
-export PATH="$HOME/.bin:$HOME/.local/bin:$PATH:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$HOME/.bin:$PATH"
 # Default editor
 export EDITOR="nvim"
 
@@ -15,14 +15,6 @@ setopt SHARE_HISTORY            # Share history across sessions
 setopt EXTENDED_HISTORY         # Save timestamp info
 setopt HIST_SAVE_NO_DUPS        # Don't write duplicates to history file
 setopt HIST_EXPIRE_DUPS_FIRST   # Expire duplicates first when trimming
-
-# Ignore common commands
-HISTORY_IGNORE="(ls|cd|pwd|exit|clear|ll|ls -a)"
-zshaddhistory() {
-  emulate -L zsh
-  [[ $1 != ${~HISTORY_IGNORE} ]]
-}
-
 
 # Enable zsh completion system
 autoload -Uz compinit
@@ -62,15 +54,10 @@ source <(fzf --zsh)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
-# Start tmux at the start of terminal
-if [[ -z "$TMUX" ]]; then
-  exec tmux new-session -A -s main
-fi
 
 # Auto activate env on cd into directory
 eval "$(direnv hook zsh)"
 
-export PATH="$PATH:$HOME/go/bin"
 
 # Set Cursor
 # 5 blinking beam
